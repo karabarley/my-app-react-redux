@@ -10,19 +10,19 @@ border: 1px red solid;
 padding: 10px;
 ` 
 
-const Login = props => (
+const Login = ({username, handleChange, handleLogin}) => (
     <LoginWrapper>
         <WrapperLabel>Login Component</WrapperLabel>
         <TextField
             name='username'
-            value={props.username}
-            handleChange={props.handleChange}
+            value={username}
+            handleChange={handleChange}
             label='Github Username:'
         />
-        {/* <Button
-            handleLogin={props.handleLogin}
+        <Button
+            handleLogin={handleLogin}
             value='Login'
-        /> */}
+        />
     </LoginWrapper>
 
 )

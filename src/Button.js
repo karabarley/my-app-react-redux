@@ -8,10 +8,10 @@ const ButtonWrapper = styled.div`
     border: 1px blue solid;
 `
 
-const Button = props => (
+const Button = ({handleLogin, value}) => (
     <ButtonWrapper>
         <WrapperLabel>Button Component</WrapperLabel>
-        <button onClick={props.handleLogin}>{props.value}</button>
+        <button onClick={handleLogin}>{value}</button>
     </ButtonWrapper>
 )
 

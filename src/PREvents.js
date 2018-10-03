@@ -24,11 +24,11 @@ const PRStatus = styled.p`
 color: ${props => colorCode(props.status)};
 `
 
-const PREvents = props => (
+const PREvents = ({ events }) => (
     <PREventsWrapper>
         <WrapperLabel>PREvents Component</WrapperLabel>
         <ul>
-            {props.events
+            {events
                 .filter((event) => event.type === 'PullRequestEvent')
                 .map((event, i) => (
                     <li key={`event-${i}`}>

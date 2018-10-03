@@ -7,18 +7,18 @@ const TextFieldWrapper = styled.div`
     font-family: Arial;
     border: 1px blue solid;
 `
-const TextField = props => (
+const TextField = ({label, value, name, handleChange}) => (
     <React.Fragment>        
         <TextFieldWrapper>
             <WrapperLabel>TextField Component</WrapperLabel>
-            <label>{props.label}</label>
+            <label>{label}</label>
             <br/>
             <input 
                type='text'
-               value={props.value}
-               name={props.name}
-               label={props.label}
-               onChange={props.handleChange}
+               value={value}
+               name={name}
+               label={label}
+               onChange={handleChange}
             />
         </TextFieldWrapper>
     </React.Fragment>

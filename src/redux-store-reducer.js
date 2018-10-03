@@ -1,23 +1,25 @@
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-export const handleChange = e => ({
-     type: 'HANDLE_CHANGE',
-     payload: e.target.value
-})
-
 const intialState = {
-    username : ''
+    username : '',
+    events: [],
+    loggedIn: false
 }
 
 const rootReducer = (state = intialState, action ) => {
     switch(action.type){
-        case 'HANDLE_CHANGE' :{
+        case 'HANDLE_CHANGE' :
             return {
                 ...state,
                 username: action.payload
             }
-        }
+        case "LOGIN":
+            return {
+                ...state,
+                loggedIn: true,
+                events: action.payload
+            }
         default: return state;
     }
 }
