@@ -7,7 +7,10 @@ const ForkedEventsWrapper = styled.div`
     border: 1px green solid;
     padding: 10px;
 `
-
+const splitRepoName = (string) => {
+    const stringArray = string.split('/')
+    return stringArray[1]
+}
 const ForkedEvents = props => (
     <ForkedEventsWrapper>
         <div>
@@ -17,7 +20,7 @@ const ForkedEvents = props => (
                     .filter((event) => event.type === 'ForkEvent')
                     .map((event, i) => (
                         <li key={`event-${i}`}>
-                            <a href={`https://github.com/${event.repo.name}`}>{event.repo.name}</a>
+                            <p>You forked <a href={`https://github.com/${event.repo.name}`}>{splitRepoName(event.repo.name)}</a> from {event.repo.name} </p>
                         </li>
                     ))}
             </ul>
