@@ -32,6 +32,7 @@ const PREvents = ({ events }) => (
                 .filter((event) => event.type === 'PullRequestEvent')
                 .map((event, i) => (
                     <li key={`event-${i}`}>
+                        <p> Pull Request: </p>
                         <a href={`https://github.com/${event.repo.name}/pulls/${event.payload.number}`}>
                             {event.payload.pull_request.title}
                         </a>
