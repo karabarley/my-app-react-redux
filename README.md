@@ -1,3 +1,9 @@
+## NOTE: 
+I may update the project sometime between the submission date and due date. Just wanted to get this in earlier incase I run into any issues while travelling. Otherwise, the base functionality is there - but could do with more styling, and a log out functionality.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
